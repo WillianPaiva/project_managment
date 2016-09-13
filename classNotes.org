@@ -1,0 +1,69 @@
+* project management
+the course will based on a project made by the university called "fete de la cience"
+the CDC cam be found on the teachers web page
+** scrum
+   topic to ready about as the teacher will be using this as reference
+** overview -> software and project management
+*** software life cycle
+    members of a project:
+    1. owner
+    2. user
+    3. developer
+
+**** the birth of the project
+     1. the user has a need! (even if he doesn't know that)
+     2. the owner express this need on a CDC
+     3. the developer realize the CDC -> delivery
+**** life
+     4. the owner deploys the product
+     5. the user "uses"
+     6. the user find anomalies and also wants improvements
+     7. the owner express this anomalies and those improvements on the CDC
+     8. the developer realize those changes
+
+**** death
+     product has no more users
+     owner pulls the plug
+     the devs has no work
+
+*** kinds of projects
+**** project development
+     starts: at the receiving of the CDC
+     finish: at delivery
+**** project "TMA"
+     projects based on improvements for a software already deployed
+**** project "MEP" "mise en production"
+     projects responsible to take care of the deployment environment
+
+** development project
+   user-->owner-->CDC-->   DEV  -->delivery-->owner-->user
+
+
+*** CDC
+    *what is the devs responsibility over the CDC*
+
+**** analyze
+     specify what cam be done and what will be done and gives the costs to realize this.
+**** conception
+     the project structuring and organization "task division"
+**** development
+     hands on !!!
+
+***** analyze
+      in: CDC
+      out: specification - what will be done and costs
+
+      best practices enumerate the list of needs and cherry pick them
+      process known as *backlog* on scrum
+****** chifrage
+       every calculation is done in man working day
+       1 day is equivalent a --> 150 lines of code --> 1 class .....
+       estimate cost of 1 day is 500euros
+
+***** conception
+      organization cut the project in Little modules
+      most used:
+      cascade
+      spiral
+      dev on "v"
+      and agyle
