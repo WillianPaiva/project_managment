@@ -1,4 +1,4 @@
-* Backlog
+* Backlog 1
 
 | number | description                                                                                                                                              | effort | priority | cost |
 |--------+----------------------------------------------------------------------------------------------------------------------------------------------------------+--------+----------+------|
@@ -24,6 +24,38 @@
 *** question 4
     Nous avons commencer le backlog en commençant par le US2 et 3, car ce sont les deux principaux et les plus liés. En effet, sans le US2, le US3 et US4 n'as pas lieu d'exister.
     Le US4 coûtent moins cher car il demande moins de travail.
-    
+
+
     
 
+* backlog phase 2
+
+| number | description                                                                                                                                             | effort | priority | cost |
+|--------+---------------------------------------------------------------------------------------------------------------------------------------------------------+--------+----------+------|
+|      1 | En tant que visiteur, je souhaite m’enregistrer comme enseignant, afin de pouvoir s'inscrire a des ateliers.                                            |        |          |      |
+|      2 | En tant que enseignant, je souhaite ajouter un nouvel atelier, afin de permettre aux enseignants de s’y inscrire.                                       |        |          |      |
+|      3 | En tant que enseignant, je souhaite lister mes ateliers, afin de les modifier ou les supprimer.                                                         |        |          |      |
+|      4 | En tant que enseignant, je souhaite pouvoir visualiser un de mes ateliers, afin de voir ce que les enseignants voient.                                  |        |          |      |
+|      5 | En tant que enseignant, je souhaite pouvoir me déconnecter.                                                                                             |        |          |      |
+|      6 | En tant que enseignant, je souhaite activer/ désactiver un ateliers, afin de permettre aux enseignants de s’y inscrire ou de ne pas s’y inscrire.       |        |          |      |
+|      7 | En tant que enseignant, je souhaite exporter un PDF de mes ateliers, afin de faire ma propre promotion.                                                 |        |          |      |
+|      8 | En tant que enseignant, je souhaite que mes ateliers soient sauvegardés dans la base de données, afin de pouvoir les retrouver si le serveur redémarre. |        |          |      |
+|      9 | En tant que enseignant, je souhaite que l’interface soit agréable à utiliser, afin de faciliter l’édition des ateliers.                                 |        |          |      |
+|     10 | En tant que enseignant, je souhaite que l’interface soit réalisée avec Bootstrap, afin de pouvoir l’utiliser sur des terminaux mobiles                  |        |          |      |
+|        |                                                                                                                                                         |        |          |      |
+
+* backlog phase 3
+
+| number | description                                                                                                                                              | effort | priority | cost |
+|--------+----------------------------------------------------------------------------------------------------------------------------------------------------------+--------+----------+------|
+|      1 | En tant que visiteur, je souhaite m’enregistrer comme laboratoire, afin de gérer mes ateliers                                                            |     13 |          |      |
+|      2 | En tant que laboratoire, je souhaite ajouter un nouvel atelier, afin de permettre aux enseignants de s’y inscrire.                                       |      8 |          |      |
+|      3 | En tant que laboratoire, je souhaite lister mes ateliers, afin de les modifier ou les supprimer.                                                         |      8 |          |      |
+|      4 | En tant que laboratoire, je souhaite pouvoir visualiser un de mes ateliers, afin de voir ce que les enseignants voient.                                  |      5 |          |      |
+|      5 | En tant que laboratoire, je souhaite pouvoir me déconnecter.                                                                                             |      1 |          |      |
+|      6 | En tant que laboratoire, je souhaite activer/ désactiver un ateliers, afin de permettre aux enseignants de s’y inscrire ou de ne pas s’y inscrire.       |      2 |          |      |
+|      7 | En tant que laboratoire, je souhaite exporter un PDF de mes ateliers, afin de faire ma propre promotion.                                                 |      5 |          |      |
+|      8 | En tant que laboratoire, je souhaite que mes ateliers soient sauvegardés dans la base de données, afin de pouvoir les retrouver si le serveur redémarre. |     13 |          |      |
+|      9 | En tant que laboratoire, je souhaite que l’interface soit agréable à utiliser, afin de faciliter l’édition des ateliers.                                 |      5 |          |      |
+|     10 | En tant que laboratoire, je souhaite que l’interface soit réalisée avec Bootstrap, afin de pouvoir l’utiliser sur des terminaux mobiles                  |      3 |          |      |
+|        |                                                                                                                                                          |        |          |      |
