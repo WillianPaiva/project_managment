@@ -1,0 +1,15 @@
+* Backlog
+
+| number | description                                                                                                                                              | effort | priority |   |
+|--------+----------------------------------------------------------------------------------------------------------------------------------------------------------+--------+----------+---|
+|      1 | En tant que visiteur, je souhaite m’enregistrer comme laboratoire, afin de gérer mes ateliers                                                            |        |          |   |
+|      2 | En tant que laboratoire, je souhaite ajouter un nouvel atelier, afin de permettre aux enseignants de s’y inscrire.                                       |        |          |   |
+|      3 | En tant que laboratoire, je souhaite lister mes ateliers, afin de les modifier ou les supprimer.                                                         |        |          |   |
+|      4 | En tant que laboratoire, je souhaite pouvoir visualiser un de mes ateliers, afin de voir ce que les enseignants voient.                                  |        |          |   |
+|      5 | En tant que laboratoire, je souhaite pouvoir me déconnecter.                                                                                             |        |          |   |
+|      6 | En tant que laboratoire, je souhaite activer/ désactiver un ateliers, afin de permettre aux enseignants de s’y inscrire ou de ne pas s’y inscrire.       |        |          |   |
+|      7 | En tant que laboratoire, je souhaite exporter un PDF de mes ateliers, afin de faire ma propre promotion.                                                 |        |          |   |
+|      8 | En tant que laboratoire, je souhaite que mes ateliers soient sauvegardés dans la base de données, afin de pouvoir les retrouver si le serveur redémarre. |        |          |   |
+|      9 | En tant que laboratoire, je souhaite que l’interface soit agréable à utiliser, afin de faciliter l’édition des ateliers.                                 |        |          |   |
+|     10 | En tant que laboratoire, je souhaite que l’interface soit réalisée avec Bootstrap, afin de pouvoir l’utiliser sur des terminaux mobiles                  |        |          |   |
+|        |                                                                                                                                                          |        |          |   |
