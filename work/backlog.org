@@ -12,7 +12,6 @@
 |      8 | En tant que laboratoire, je souhaite que mes ateliers soient sauvegardés dans la base de données, afin de pouvoir les retrouver si le serveur redémarre. |     13 |          |      |
 |      9 | En tant que laboratoire, je souhaite que l’interface soit agréable à utiliser, afin de faciliter l’édition des ateliers.                                 |      5 |          |      |
 |     10 | En tant que laboratoire, je souhaite que l’interface soit réalisée avec Bootstrap, afin de pouvoir l’utiliser sur des terminaux mobiles                  |      3 |          |      |
-|        |                                                                                                                                                          |        |          |      |
 
 ** questions
 *** question 1
@@ -25,8 +24,64 @@
     Nous avons commencer le backlog en commençant par le US2 et 3, car ce sont les deux principaux et les plus liés. En effet, sans le US2, le US3 et US4 n'as pas lieu d'exister.
     Le US4 coûtent moins cher car il demande moins de travail.
 
+** task list for each user story
 
-    
+*** US#1 US#5
+    | task                                        | cost M/D |
+    |---------------------------------------------+----------|
+    | database coding                             |      0.5 |
+    | user manager coding (acess privileges)      |        2 |
+    | coding of the loging/logoff system          |        1 |
+    | REST API coding                             |        1 |
+    | coding of the view for the registering      |        1 |
+    | coding of the controler for the registering |        1 |
+    | codign of the model for the registering     |        1 |
+    | test the registering                        |        1 |
+    | test the REST API                           |      0.5 |
+    | test the login and logoff                   |      0.5 |
+    |---------------------------------------------+----------|
+    |TOTAL                                        |      9.5 |
+#+TBLFM: @12$2=vsum(@2$2..@11$2)
+
+
+*** US#2 US#3 US#4 US#6
+
+    | task                                         | cost M/D |
+    |----------------------------------------------+----------|
+    | database coding                              |      0.5 |
+    | REST API coding                              |        1 |
+    | coding of the view for the atelier           |        1 |
+    | coding of the controler for the atelier      |        1 |
+    | codign of the model for the atelier          |        1 |
+    | coding of the view for the atelier list      |        1 |
+    | coding of the controler for the atelier list |        1 |
+    | codign of the model for the atelier list     |        1 |
+    | test the atelier list                        |        1 |
+    | test the atelir visualisation                |        1 |
+    | test the REST API                            |      0.5 |
+    |----------------------------------------------+----------|
+    | TOTAL                                        |      10. |
+#+TBLFM: @13$2=vsum(@2$2..@12$2)
+
+*** US#7
+
+
+    | task                       | cost M/D |
+    |----------------------------+----------|
+    | REST API coding            |      0.5 |
+    | coding of the pdf exporter |      1.5 |
+    | test the pdf builder       |        1 |
+    |----------------------------+----------|
+    | TOTAL                      |       3. |
+#+TBLFM: @5$2=vsum(@2$2..@4$2)
+
+*** US#8 US#9
+    implicity on all the other user story
+
+*** US#10
+    the website will be responsive but that doesn't imply that bootstrap is the best solution for that
+
+
 
 * backlog phase 2
 
@@ -39,6 +94,14 @@
 |      5 | En tant que enseignant, je souhaite avoir accès en temps réel aux disponiblités des ateliers afin de pouvoir m'inscrire aux ateliers.                   |    13  |          |      |
 |      6 | En tant que enseignant, je souhaite avoir une carte géographique localisant les ateliers afin de savoir comment m'y rendre.                             |    21  |          |      |
 |      7 | En tant que enseignant, je souhaite pouvoir être averti d'un refus ou d'une validation d'une inscription à un atelier.                                  |    3   |          |      |
+
+
+** task list for each user story
+
+*** US#1
+
+
+   
 
 * backlog phase 3
 
