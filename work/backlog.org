@@ -27,52 +27,52 @@
 ** task list for each user story
 
 *** US#1 US#5
-    | task                                        | cost M/D |
-    |---------------------------------------------+----------|
-    | database coding                             |      0.5 |
-    | user manager coding (acess privileges)      |        2 |
-    | coding of the loging/logoff system          |        1 |
-    | REST API coding                             |        1 |
-    | coding of the view for the registering      |        1 |
-    | coding of the controler for the registering |        1 |
-    | codign of the model for the registering     |        1 |
-    | test the registering                        |        1 |
-    | test the REST API                           |      0.5 |
-    | test the login and logoff                   |      0.5 |
-    |---------------------------------------------+----------|
-    |TOTAL                                        |      9.5 |
+    | task                                        | cost M/D | nb |
+    |---------------------------------------------+----------+----|
+    | database coding                             |      0.5 |  1 |
+    | user manager coding (acess privileges)      |        2 |  2 |
+    | coding of the loging/logoff system          |        1 |  3 |
+    | REST API coding                             |        1 |  4 |
+    | coding of the view for the registering      |        1 |  5 |
+    | coding of the controler for the registering |        1 |  6 |
+    | codign of the model for the registering     |        1 |  7 |
+    | test the registering                        |        1 |  8 |
+    | test the REST API                           |      0.5 |  9 |
+    | test the login and logoff                   |      0.5 | 10 |
+    |---------------------------------------------+----------+----|
+    | TOTAL                                       |      9.5 |    |
 #+TBLFM: @12$2=vsum(@2$2..@11$2)
 
 
 *** US#2 US#3 US#4 US#6
 
-    | task                                         | cost M/D |
-    |----------------------------------------------+----------|
-    | database coding                              |      0.5 |
-    | REST API coding                              |        1 |
-    | coding of the view for the atelier           |        1 |
-    | coding of the controler for the atelier      |        1 |
-    | codign of the model for the atelier          |        1 |
-    | coding of the view for the atelier list      |        1 |
-    | coding of the controler for the atelier list |        1 |
-    | codign of the model for the atelier list     |        1 |
-    | test the atelier list                        |        1 |
-    | test the atelir visualisation                |        1 |
-    | test the REST API                            |      0.5 |
-    |----------------------------------------------+----------|
-    | TOTAL                                        |      10. |
+    | task                                         | cost M/D | nb |
+    |----------------------------------------------+----------+----|
+    | database coding                              |      0.5 |  1 |
+    | REST API coding                              |        1 |  3 |
+    | coding of the view for the atelier           |        1 | 11 |
+    | coding of the controler for the atelier      |        1 | 12 |
+    | codign of the model for the atelier          |        1 | 13 |
+    | coding of the view for the atelier list      |        1 | 14 |
+    | coding of the controler for the atelier list |        1 | 15 |
+    | codign of the model for the atelier list     |        1 | 16 |
+    | test the atelier list                        |        1 | 17 |
+    | test the atelir visualisation                |        1 | 18 |
+    | test the REST API                            |      0.5 |  9 |
+    |----------------------------------------------+----------+----|
+    | TOTAL                                        |      10. |    |
 #+TBLFM: @13$2=vsum(@2$2..@12$2)
 
 *** US#7
 
 
-    | task                       | cost M/D |
-    |----------------------------+----------|
-    | REST API coding            |      0.5 |
-    | coding of the pdf exporter |      1.5 |
-    | test the pdf builder       |        1 |
-    |----------------------------+----------|
-    | TOTAL                      |       3. |
+    | task                       | cost M/D | nb |
+    |----------------------------+----------+----|
+    | REST API coding            |      0.5 |  3 |
+    | coding of the pdf exporter |      1.5 | 19 |
+    | test the pdf builder       |        1 | 20 |
+    |----------------------------+----------+----|
+    | TOTAL                      |       3. |    |
 #+TBLFM: @5$2=vsum(@2$2..@4$2)
 
 *** US#8 US#9
@@ -81,7 +81,32 @@
 *** US#10
     the website will be responsive but that doesn't imply that bootstrap is the best solution for that
 
+*** dependence
 
+|    | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |   | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 |   | 19 | 20 |
+|----+---+---+---+---+---+---+---+---+---+---+----+----+----+----+----+----+----+----+----+---+----+----|
+|  1 |   |   |   |   |   |   |   |   |   |   |    |    |    |    |    |    |    |    |    |   |    |    |
+|  2 | x |   |   |   |   |   |   |   |   |   |    |    |    |    |    |    |    |    |    |   |    |    |
+|  3 | x | x |   | x |   |   |   |   |   |   |    |    |    |    |    |    |    |    |    |   |    |    |
+|  4 | x |   |   |   |   |   |   |   |   |   |    |    |    |    |    |    |    |    |    |   |    |    |
+|  5 |   |   |   |   |   | x |   |   |   |   |    |    |    |    |    |    |    |    |    |   |    |    |
+|  6 |   |   |   |   |   |   | x |   |   |   |    |    |    |    |    |    |    |    |    |   |    |    |
+|  7 | x |   |   | x |   |   |   |   |   |   |    |    |    |    |    |    |    |    |    |   |    |    |
+|  8 |   |   |   |   | x | x | x |   |   |   |    |    |    |    |    |    |    |    |    |   |    |    |
+|  9 |   |   |   | x |   |   |   |   |   |   |    |    |    |    |    |    |    |    |    |   |    |    |
+| 10 |   |   | x |   |   |   |   |   |   |   |    |    |    |    |    |    |    |    |    |   |    |    |
+|    |   |   |   |   |   |   |   |   |   |   |    |    |    |    |    |    |    |    |    |   |    |    |
+| 11 |   |   |   |   |   |   |   |   |   |   |    |    | x  |    |    |    |    |    |    |   |    |    |
+| 12 |   |   |   |   |   |   |   |   |   |   |    |    |    | x  |    |    |    |    |    |   |    |    |
+| 13 | x |   | x |   |   |   |   |   |   |   |    |    |    |    |    |    |    |    |    |   |    |    |
+| 14 |   |   |   |   |   |   |   |   |   |   |    |    |    |    |    | x  |    |    |    |   |    |    |
+| 15 |   |   |   |   |   |   |   |   |   |   |    |    |    |    |    |    | x  |    |    |   |    |    |
+| 16 | x |   | x |   |   |   |   |   |   |   |    |    |    |    |    |    |    |    |    |   |    |    |
+| 17 |   |   |   |   |   |   |   |   |   |   |    |  x | x  | x  |    |    |    |    |    |   |    |    |
+| 18 |   |   |   |   |   |   |   |   |   |   |    |    |    |    |  x | x  | x  |    |    |   |    |    |
+|    |   |   |   |   |   |   |   |   |   |   |    |    |    |    |    |    |    |    |    |   |    |    |
+| 19 |   |   | x |   |   |   |   |   |   |   |    |    |    |    |    |    |    |    |    |   |    |    |
+| 20 |   |   |   |   |   |   |   |   |   |   |    |    |    |    |    |    |    |    |    |   |  x |    |
 
 * backlog phase 2
 
