@@ -24,7 +24,31 @@
     Nous avons commencer le backlog en commençant par le US2 et 3, car ce sont les deux principaux et les plus liés. En effet, sans le US2, le US3 et US4 n'as pas lieu d'exister.
     Le US4 coûtent moins cher car il demande moins de travail.
 
-** task list for each user story
+** list de tâche
+
+*** US#1 US#5
+
+ On passe les UserStory 1 et 5
+
+*** US#2 US#3 US#4 US#6
+
+    | task                                         | cost M/D | nb |
+    |----------------------------------------------+----------+----|
+    | database coding                              |      0.5 |  1 |
+    | REST API coding                              |        1 |  2 |
+    | coding of the model for the atelier          |      0.5 |  3 |
+    | coding of the controler for the atelier      |      0.5 |  4 |
+    | codin of the view for the atelier            |        1 |  5 |
+    | coding of the model for the atelier list     |      0.5 |  6 |
+    | coding of the controler for the atelier list |      0.5 |  7 |
+    | coding of the view for the atelier list      |        1 |  8 |
+    | Tests couche REST                            |      0.5 |  9 |
+    | Tests Controler d'Atelier                    |      0.5 | 10 |
+    | Tests Controler de liste d'Ateliers          |      6.5 | 11 |
+    |----------------------------------------------+----------+----|
+    | TOTAL                                        |       7. |    |
+#+TBLFM: @12$2=vsum(@2$2..@11$2)
+
 
 *** Détail des tâches
 
@@ -96,34 +120,6 @@ Création du modèle gérant la liste des ateliers.
 
      Tests unitaires fonctions
 
-*** US#1 US#5
-
- On passe les UserStory 1 et 5
-
-*** US#2 US#3 US#4 US#6
-
-    | task                                         | cost M/D | nb |
-    |----------------------------------------------+----------+----|
-    | database coding                              |      0.5 |  1 |
-    | REST API coding                              |        1 |  2 |
-    | coding of the model for the atelier          |      0.5 |  3 |
-    | coding of the controler for the atelier      |      0.5 |  4 |
-    | codin of the view for the atelier            |        1 |  5 |
-    | coding of the model for the atelier list     |      0.5 |  6 |
-    | coding of the controler for the atelier list |      0.5 |  7 |
-    | coding of the view for the atelier list      |        1 |  8 |
-    | Tests couche REST                            |      0.5 |  9 |
-    | Tests Controler d'Atelier                    |      0.5 | 10 |
-    | Tests Controler de liste d'Ateliers          |      6.5 | 11 |
-    |----------------------------------------------+----------+----|
-    | TOTAL                                        |       7. |    |
-#+TBLFM: @12$2=vsum(@2$2..@11$2)
-
-*** US#8 US#9
-    implicity on all the other user story
-
-*** US#10
-    the website will be responsive but that doesn't imply that bootstrap is the best solution for that
 
 *** dependence
 
