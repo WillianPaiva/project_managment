@@ -161,36 +161,19 @@ Création du modèle gérant la liste des ateliers.
 | dev2 |   3 | 6 |     | 9 |  10 |   |   7 | 11 |     |   |     |   |     |   | 
 (Préférable pour un chef de projet)  
 
-*** planning avec absence
-
-3 dev:
-|      | 0.5 | 1 | 1.5 | 2 | 2.5 | 3 | 3.5 |  4 | 4.5 | 5 | 5.5 | 6 | 6.5 | 7 |
-|------+-----+---+-----+---+-----+---+-----+----+-----+---+-----+---+-----+---|
-| dev1 |   1 | 2 |   2 |   |     |   |     |  8 |   8 |   |     |   |     |   |
-| dev2 |   3 | 6 |     | 9 |  10 |   |   7 |    |     |   |     |   |     |   |
-| dev3 |     |   |     | 4 |   5 | 5 |     | 11 |     |   |     |   |     |   |
-
-2 dev:
-|      | 0.5 | 1 | 1.5 | 2 | 2.5 | 3 | 3.5 |  4 | 4.5 | 5 | 5.5 | 6 | 6.5 | 7 |
-|------+-----+---+-----+---+-----+---+-----+----+-----+---+-----+---+-----+---|
-| dev1 |   1 | 2 |   2 | 4 |   5 | 5 |     |  8 |   8 |   |     |   |     |   |
-| dev2 |   3 | 6 |     | 9 |  10 |   |   7 | 11 |     |   |     |   |     |   |
-
-
-
 
 
 * backlog phase 2
 
-| number | description                                                                                                                                             | effort | priority | cost |
-|--------+---------------------------------------------------------------------------------------------------------------------------------------------------------+--------+----------+------|
-|      1 | En tant que visiteur, je souhaite m’enregistrer comme enseignant, afin de pouvoir s'inscrire a des ateliers.                                            |    13  |          |      |
-|      2 | En tant que enseignant, je souhaite avoir un récapitulatif des mes inscriptions, afin d'y avoir des informations de contact, d'horaire et de trajet.    |    3   |          |      |
-|      3 | En tant que enseignant, je souhaite avoir accès à une liste des fiches d'ateliers enregistrés.                                                          |    8   |          |      |
-|      4 | En tant que enseignant, je souhaite voir la liste des fiches par laboratoire et par thématique afin de cibler ma demande.                               |    5   |          |      |
-|      5 | En tant que enseignant, je souhaite avoir accès en temps réel aux disponiblités des ateliers afin de pouvoir m'inscrire aux ateliers.                   |    13  |          |      |
-|      6 | En tant que enseignant, je souhaite avoir une carte géographique localisant les ateliers afin de savoir comment m'y rendre.                             |    21  |          |      |
-|      7 | En tant que enseignant, je souhaite pouvoir être averti d'un refus ou d'une validation d'une inscription à un atelier.                                  |    3   |          |      |
+| number | description                                                                                                                                          | effort | priority | cost |
+|--------+------------------------------------------------------------------------------------------------------------------------------------------------------+--------+----------+------|
+|      1 | En tant que visiteur, je souhaite m’enregistrer comme enseignant, afin de pouvoir s'inscrire a des ateliers.                                         |     13 |          |      |
+|      2 | En tant que enseignant, je souhaite avoir un récapitulatif des mes inscriptions, afin d'y avoir des informations de contact, d'horaire et de trajet. |      3 |          |      |
+|      3 | En tant que enseignant, je souhaite avoir accès à une liste des fiches d'ateliers enregistrés.                                                       |      8 |          |      |
+|      4 | En tant que enseignant, je souhaite voir la liste des fiches par laboratoire et par thématique afin de cibler ma demande.                            |      5 |          |      |
+|      5 | En tant que enseignant, je souhaite avoir accès en temps réel aux disponiblités des ateliers afin de pouvoir m'inscrire aux ateliers.                |     13 |          |      |
+|      6 | En tant que enseignant, je souhaite avoir une carte géographique localisant les ateliers afin de savoir comment m'y rendre.                          |     21 |          |      |
+|      7 | En tant que enseignant, je souhaite pouvoir être averti d'un refus ou d'une validation d'une inscription à un atelier.                               |      3 |          |      |
 
 
 ** task list for each user story
