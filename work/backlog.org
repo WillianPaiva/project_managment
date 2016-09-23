@@ -141,6 +141,8 @@ Création du modèle gérant la liste des ateliers.
 | 10 |   |   |   | x |   |   |   |   |   |    |
 | 11 |   |   |   |   |   |   | x |   |   |    |
 
+*** PERT
+[[./images/Diagram1.png]]
 
 *** planning
 
