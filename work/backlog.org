@@ -73,7 +73,7 @@
 
 **** Tâche 3 Modèle Atelier
 
-     the creation of the model atelire take in consideration the development of:
+     the creation of the model atelier take in consideration the development of:
      - the class atelier (this should contain  nom, prénom, date de naissance, mot de passe, adresse mail, enseignant/laboratoire,
      liste ateliers (inscrit)/liste atelier (créé), ID)
      - also all the getter and setters.
@@ -91,11 +91,16 @@
      - fundtion update sends a message to de viu to update
 
 **** Tâche 5 View Atelier
+     atelier view:
+     this is the HTML/CSS representation of the atelier:
+     this view should have clean view of the atelier showing all of its atributes:
+     titre, thème, type, date, remarque, laboratoire, lieu, durée, capacité, liste d'inscription,
+     résumé, liste animateurs, partenaires, public visé, contenu
+     this view should also have the buttons:
+     - save : calls the respective function on the controler
+     - delete : calls the respective function on the controler
+     - the forms should be editable (depending on the user access)
 
-
-     Visualisation html5/CSS3 des données contenues dans le modèle Atelier.
-     Bouton d'interaction: sauvegarde, modifier(titre, thème, type, date, remarque, laboratoire, lieu, durée, capacité, liste d'inscription,
-     résumé, liste animateurs, partenaires, public visé, contenu), suppression.
 
 **** Tâche 6 Modèle Ateliers
 
@@ -108,6 +113,7 @@
 
      ateliers controller
      the controler should have the following functionalities :
+     - create a REST querry
      - delete a item from the list
      - return the list sorted on all of the diferente attributes from the class atelier.
      - call a creation of new atelier
@@ -115,11 +121,13 @@
 
 **** Tâche 8 View Ateliers
 
-     Création d'une vue HTML5/CSS3 pour visualiser la liste des ateliers.
-     - Création Atelier
-     - Supprimer Atelier
-     - Lister 10 par 10
-     - Appeler les fonctions de tri du controlleur.
+     ateliers view:
+     the ateliers view will show a list of ateliers based on the return of a query.
+     - the list should be a infinit scrolling list
+     - should contain a search form that will call the querry on the controler
+     - a sort dec/inc from all diferent atributes from um atelier
+     - and on click should opem one atelier on its view
+     - this view shoul also have a button "new" that opens one blank atelier view.
 
 **** Tâche 9 Tests couche REST
 
