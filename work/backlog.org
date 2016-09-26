@@ -61,28 +61,37 @@
      résumé, liste animateurs, partenaires, public visé, contenu, ID
 
 **** Tâche 2 BD (2)
+     Development of the REST API
+     supporting the following http requests:
+        - create atelier
+        - load atelier
+        - save atelier
+        - delete atelier
+        - query db (returns a list of ateliers)
+     and return the the results in JSON format (to keep a standard format)
 
-     Fonction de requêtes php vers la base de données:
-+ Créer atelier
-+ Récupérer atelier
-+ Modifier atelier
-+ Supprimer atelier
-+ Chercher une liste d'ateliers
-
-Les fonctions renvoie les données sous format JSON.
 
 **** Tâche 3 Modèle Atelier
 
-     Création du modèle Atelier:
-+ Récupération de tout les champs contenues dans la BD.
+     the creation of the model atelire take in consideration the development of:
+     - the class atelier (this should contain  nom, prénom, date de naissance, mot de passe, adresse mail, enseignant/laboratoire,
+     liste ateliers (inscrit)/liste atelier (créé), ID)
+     - also all the getter and setters.
+     - this class should be able to instantiate a new object "atelier" from the data in JSON format that cam be provided from the rest api.
+     - the toJSON function that returns the JSON format of the class
+     - the atelier needs to be comparable on all of its atributes
+
 
 **** Tâche 4 Controler Atelier
 
-     Création du controlleur:
-+ Il doit pouvoir sauvegarder, charger et modifier un atelier.
-+ Il doit modifier la vue.
+     the atleier control-er is responsible for generating the rest api HTTP requests and creating and managing the atelier objects and informing the view about changes
+     the controller should have the following functions:
+     - save/modify: make the necessary changes on the atelier object and calls the toJSON from atelier and send it to the REST API to update on the database
+     - load: request an atelier to the rest api and create the object Atelier with the data recoverd
+     - fundtion update sends a message to de viu to update
 
 **** Tâche 5 View Atelier
+
 
      Visualisation html5/CSS3 des données contenues dans le modèle Atelier.
      Bouton d'interaction: sauvegarde, modifier(titre, thème, type, date, remarque, laboratoire, lieu, durée, capacité, liste d'inscription,
@@ -90,23 +99,27 @@ Les fonctions renvoie les données sous format JSON.
 
 **** Tâche 6 Modèle Ateliers
 
-Création du modèle gérant la liste des ateliers.
+     creation of the ateliers model:
+     this class is basycly a list of ateliers.
+     this class should be able to create a list from a JSON doc that is returned from the REST API
 
 **** Tache 7 Controler Ateliers
 
-     Création du controlleur Ateliers:
-     + Renvoyer un item de la liste
-     + Supprimer en restant cohérent (supprimer de la liste, de la vue et de la BD)
-     + Trier par Nom, Date, Type, Laboratoire, par lieu.
-     + Créer Atelier (donc créer sa Vue)
+
+     ateliers controller
+     the controler should have the following functionalities :
+     - delete a item from the list
+     - return the list sorted on all of the diferente attributes from the class atelier.
+     - call a creation of new atelier
+     - and send the changes to the db via the REST API
 
 **** Tâche 8 View Ateliers
 
      Création d'une vue HTML5/CSS3 pour visualiser la liste des ateliers.
-     + Création Atelier
-     + Supprimer Atelier
-     + Lister 10 par 10
-     + Appeler les fonctions de tri du controlleur.
+     - Création Atelier
+     - Supprimer Atelier
+     - Lister 10 par 10
+     - Appeler les fonctions de tri du controlleur.
 
 **** Tâche 9 Tests couche REST
 
