@@ -1,0 +1,213 @@
+* Backlog 1
+
+| number | description                                                                                                                                              | effort | priority | cost |
+|--------+----------------------------------------------------------------------------------------------------------------------------------------------------------+--------+----------+------|
+|      1 | En tant que visiteur, je souhaite m’enregistrer comme laboratoire, afin de gérer mes ateliers                                                            |     13 |          |      |
+|      2 | En tant que laboratoire, je souhaite ajouter un nouvel atelier, afin de permettre aux enseignants de s’y inscrire.                                       |      8 |          |      |
+|      3 | En tant que laboratoire, je souhaite lister mes ateliers, afin de les modifier ou les supprimer.                                                         |      8 |          |      |
+|      4 | En tant que laboratoire, je souhaite pouvoir visualiser un de mes ateliers, afin de voir ce que les enseignants voient.                                  |      5 |          |      |
+|      5 | En tant que laboratoire, je souhaite pouvoir me déconnecter.                                                                                             |      1 |          |      |
+|      6 | En tant que laboratoire, je souhaite activer/ désactiver un ateliers, afin de permettre aux enseignants de s’y inscrire ou de ne pas s’y inscrire.       |      2 |          |      |
+|      7 | En tant que laboratoire, je souhaite exporter un PDF de mes ateliers, afin de faire ma propre promotion.                                                 |      5 |          |      |
+|      8 | En tant que laboratoire, je souhaite que mes ateliers soient sauvegardés dans la base de données, afin de pouvoir les retrouver si le serveur redémarre. |     13 |          |      |
+|      9 | En tant que laboratoire, je souhaite que l’interface soit agréable à utiliser, afin de faciliter l’édition des ateliers.                                 |      5 |          |      |
+|     10 | En tant que laboratoire, je souhaite que l’interface soit réalisée avec Bootstrap, afin de pouvoir l’utiliser sur des terminaux mobiles                  |      3 |          |      |
+
+** questions
+*** question 1
+    US10
+*** question 2
+    US1 mais elle est utile pour que les ateliers soient en acces protege.
+*** question 3
+    Cet US pourrait se diviser en trois parties: lister, modifier et supprimer.
+*** question 4
+    Nous avons commencer le backlog en commençant par le US2 et 3, car ce sont les deux principaux et les plus liés. En effet, sans le US2, le US3 et US4 n'as pas lieu d'exister.
+    Le US4 coûtent moins cher car il demande moins de travail.
+
+** list de tâche
+
+*** US#1 US#5
+
+ On passe les UserStory 1 et 5
+
+*** US#2 US#3 US#4 US#6
+
+    | task                                         | cost M/D | nb |
+    |----------------------------------------------+----------+----|
+    | database coding                              |      0.5 |  1 |
+    | REST API coding                              |        1 |  2 |
+    | coding of the model for the atelier          |      0.5 |  3 |
+    | coding of the controler for the atelier      |      0.5 |  4 |
+    | codin of the view for the atelier            |        1 |  5 |
+    | coding of the model for the atelier list     |      0.5 |  6 |
+    | coding of the controler for the atelier list |      0.5 |  7 |
+    | coding of the view for the atelier list      |        1 |  8 |
+    | Tests couche REST                            |      0.5 |  9 |
+    | Tests Controler d'Atelier                    |      0.5 | 10 |
+    | Tests Controler de liste d'Ateliers          |      6.5 | 11 |
+    |----------------------------------------------+----------+----|
+    | TOTAL                                        |       7. |    |
+#+TBLFM: @12$2=vsum(@2$2..@11$2)
+
+
+*** Détail des tâches
+
+**** Tâche 1 BD (1)
+
+     Conception de la BD et création SQL
+     Utilisateur : nom, prénom, date de naissance, mot de passe, adresse mail, enseignant/laboratoire,
+     liste ateliers (inscrit)/liste atelier (créé), ID
+     Atelier : titre, thème, type, date, remarque, laboratoire, lieu, durée, capacité, liste d'inscription,
+     résumé, liste animateurs, partenaires, public visé, contenu, ID
+
+**** Tâche 2 BD (2)
+     Development of the REST API
+     supporting the following http requests:
+        - create atelier
+        - load atelier
+        - save atelier
+        - delete atelier
+        - query db (returns a list of ateliers)
+     and return the the results in JSON format (to keep a standard format)
+
+
+**** Tâche 3 Modèle Atelier
+
+     the creation of the model atelier take in consideration the development of:
+     - the class atelier (this should contain  nom, prénom, date de naissance, mot de passe, adresse mail, enseignant/laboratoire,
+     liste ateliers (inscrit)/liste atelier (créé), ID)
+     - also all the getter and setters.
+     - this class should be able to instantiate a new object "atelier" from the data in JSON format that cam be provided from the rest api.
+     - the toJSON function that returns the JSON format of the class
+     - the atelier needs to be comparable on all of its atributes
+
+
+**** Tâche 4 Controler Atelier
+
+     the atleier control-er is responsible for generating the rest api HTTP requests and creating and managing the atelier objects and informing the view about changes
+     the controller should have the following functions:
+     - save/modify: make the necessary changes on the atelier object and calls the toJSON from atelier and send it to the REST API to update on the database
+     - load: request an atelier to the rest api and create the object Atelier with the data recoverd
+     - fundtion update sends a message to de viu to update
+
+**** Tâche 5 View Atelier
+     atelier view:
+     this is the HTML/CSS representation of the atelier:
+     this view should have clean view of the atelier showing all of its atributes:
+     titre, thème, type, date, remarque, laboratoire, lieu, durée, capacité, liste d'inscription,
+     résumé, liste animateurs, partenaires, public visé, contenu
+     this view should also have the buttons:
+     - save : calls the respective function on the controler
+     - delete : calls the respective function on the controler
+     - the forms should be editable (depending on the user access)
+
+
+**** Tâche 6 Modèle Ateliers
+
+     creation of the ateliers model:
+     this class is basycly a list of ateliers.
+     this class should be able to create a list from a JSON doc that is returned from the REST API
+
+**** Tache 7 Controler Ateliers
+
+
+     ateliers controller
+     the controler should have the following functionalities :
+     - create a REST querry
+     - delete a item from the list
+     - return the list sorted on all of the diferente attributes from the class atelier.
+     - call a creation of new atelier
+     - and send the changes to the db via the REST API
+
+**** Tâche 8 View Ateliers
+
+     ateliers view:
+     the ateliers view will show a list of ateliers based on the return of a query.
+     - the list should be a infinit scrolling list
+     - should contain a search form that will call the querry on the controler
+     - a sort dec/inc from all diferent atributes from um atelier
+     - and on click should opem one atelier on its view
+     - this view shoul also have a button "new" that opens one blank atelier view.
+
+**** Tâche 9 Tests couche REST
+
+     Tester accès, tests requêtes
+
+**** Tâche 10 Tests Controler d'Atelier
+
+     Tests unitaires fonctions
+
+**** Tâche 11 Tests Controler de liste d'Ateliers
+
+     Tests unitaires fonctions
+
+
+*** dependence
+
+|    | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+|----+---+---+---+---+---+---+---+---+---+----|
+|  1 |   |   |   |   |   |   |   |   |   |    |
+|  2 | x |   |   |   |   |   |   |   |   |    |
+|  3 |   |   |   |   |   |   |   |   |   |    |
+|  4 |   | x | x |   |   |   |   |   |   |    |
+|  5 |   |   |   | x |   |   |   |   |   |    |
+|  6 |   |   | x |   |   |   |   |   |   |    |
+|  7 |   |   |   |   | x | x |   |   |   |    |
+|  8 |   |   |   |   |   |   | x |   |   |    |
+|  9 |   | x |   |   |   |   |   |   |   |    |
+| 10 |   |   |   | x |   |   |   |   |   |    |
+| 11 |   |   |   |   |   |   | x |   |   |    |
+
+*** PERT
+[[./images/Diagram1.png]]
+
+*** planning
+
+
+3 dev:
+|      | 0.5 | 1 | 1.5 | 2 | 2.5 | 3 | 3.5 |  4 | 4.5 | 5 | 5.5 | 6 | 6.5 | 7 |
+|------+-----+---+-----+---+-----+---+-----+----+-----+---+-----+---+-----+---|
+| dev1 |   1 | 2 |   2 |   |     |   |     |  8 |   8 |   |     |   |     |   |
+| dev2 |   3 | 6 |     | 9 |  10 |   |   7 |    |     |   |     |   |     |   |
+| dev3 |     |   |     | 4 |   5 | 5 |     | 11 |     |   |     |   |     |   |
+
+2 dev:
+|      | 0.5 | 1 | 1.5 | 2 | 2.5 | 3 | 3.5 |  4 | 4.5 | 5 | 5.5 | 6 | 6.5 | 7 |
+|------+-----+---+-----+---+-----+---+-----+----+-----+---+-----+---+-----+---|
+| dev1 |   1 | 2 |   2 | 4 |   5 | 5 |     |  8 |   8 |   |     |   |     |   |
+| dev2 |   3 | 6 |     | 9 |  10 |   |   7 | 11 |     |   |     |   |     |   | 
+(Préférable pour un chef de projet)  
+
+
+
+* backlog phase 2
+
+| number | description                                                                                                                                          | effort | priority | cost |
+|--------+------------------------------------------------------------------------------------------------------------------------------------------------------+--------+----------+------|
+|      1 | En tant que visiteur, je souhaite m’enregistrer comme enseignant, afin de pouvoir s'inscrire a des ateliers.                                         |     13 |          |      |
+|      2 | En tant que enseignant, je souhaite avoir un récapitulatif des mes inscriptions, afin d'y avoir des informations de contact, d'horaire et de trajet. |      3 |          |      |
+|      3 | En tant que enseignant, je souhaite avoir accès à une liste des fiches d'ateliers enregistrés.                                                       |      8 |          |      |
+|      4 | En tant que enseignant, je souhaite voir la liste des fiches par laboratoire et par thématique afin de cibler ma demande.                            |      5 |          |      |
+|      5 | En tant que enseignant, je souhaite avoir accès en temps réel aux disponiblités des ateliers afin de pouvoir m'inscrire aux ateliers.                |     13 |          |      |
+|      6 | En tant que enseignant, je souhaite avoir une carte géographique localisant les ateliers afin de savoir comment m'y rendre.                          |     21 |          |      |
+|      7 | En tant que enseignant, je souhaite pouvoir être averti d'un refus ou d'une validation d'une inscription à un atelier.                               |      3 |          |      |
+
+
+** task list for each user story
+
+*** US#1
+
+
+   
+
+* backlog phase 3
+
+Utilisateur = Enseignant ET laboratoire.
+
+| number | description                                                                                                                                                                            | effort | priority | cost |
+|--------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+----------+------|
+|      2 | En tant que laboratoire, je souhaite être capable de créer une carte géographique.                                                                                                     |  21    |          |      |
+|      3 | En tant que enseignant, je souhaite avoir accès à des cartes graphiques afin de pouvoir construire et visualiser mes parcours plus facilement.                                         |  21    |          |      |
+|      4 | En tant que enseignant, je souhaite avoir une visualisation bien définie afin de différencier chaque discipline.                                                                       |  13    |          |      |
+|      5 | En tant que enseignant, je souhaite avoir un récapitulatif des ateliers avec des informations d'horaires, de contact et d'itinéraire.                                                  |  5     |          |      |
+|      6 | En tant que laboratoire, je souhaite avoir un récapitulatif des ateliers avec des informations d'heure, de date, de niveau de la classe de l'enseignant et le nom de l'établissement.  |  5     |          |      |
