@@ -29,18 +29,17 @@
 
 *** US#2 US#3
 
-    | task                                               | cost M/D | nb |
-    |----------------------------------------------------+----------+----|
-    | requête SQL pour créer la table Atelier            |      0.5 |  1 |
-    | contrôleur de la page pour l'ajout d'un atelier    |        1 |  2 |
-    | vue de la page php pour l'ajout d'un atelier       |      0.5 |  3 |
-    | contrôleur de la page php pour la liste d'ateliers |        1 |  4 |
-    | vue de la page pour la liste d'ateliers            |        1 |  5 |
-    | réalisation des tests unitaires                    |      0.5 |  6 |
-    |----------------------------------------------------+----------+----|
-    | TOTAL                                              |      4.5 |    |
+    | task                                                          | cost M/D | nb |
+    |---------------------------------------------------------------+----------+----|
+    | requête SQL pour créer la table Atelier                       |      0.5 |  1 |
+    | contrôleur de la page php qui représente l'ajout d'un atelier |        1 |  2 |
+    | vue de la page qui représente l'ajout d'un atelier            |      0.5 |  3 |
+    | contrôleur de la page php qui représente la liste d'ateliers  |        1 |  4 |
+    | vue de la page php qui représente la liste d'ateliers         |        1 |  5 |
+    | réalisation des tests unitaires                               |      0.5 |  6 |
+    |---------------------------------------------------------------+----------+----|
+    | TOTAL                                                         |      4.5 |    |
 #+TBLFM: @8$2=vsum(@2$2..@7$2)
-
 
 *** Détail des tâches
 
