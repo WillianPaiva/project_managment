@@ -93,4 +93,4 @@
 |  6 |   | x |   | x |   |   |
 
 *** PERT		
-￼ [[./images/Diagram2.png]]
+￼ [[../diagram2.png]]
