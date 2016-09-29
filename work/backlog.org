@@ -24,7 +24,7 @@
     Nous avons commencer le backlog en commençant par le US2 et 3, car ce sont les deux principaux et les plus liés. En effet, sans le US2, le US3 et US4 n'as pas lieu d'exister.
     Le US4 coûtent moins cher car il demande moins de travail.
 
-** list de tâche
+** liste des tâches
 
 
 *** US#2 US#3
@@ -35,7 +35,7 @@
     | contrôleur de la page pour l'ajout d'un atelier    |        1 |  2 |
     | vue de la page php pour l'ajout d'un atelier       |      0.5 |  3 |
     | contrôleur de la page php pour la liste d'ateliers |        1 |  4 |
-    | vue de la page pour la liste d'ateleirs            |        1 |  5 |
+    | vue de la page pour la liste d'ateliers            |        1 |  5 |
     | réalisation des tests unitaires                    |      0.5 |  6 |
     |----------------------------------------------------+----------+----|
     | TOTAL                                              |      4.5 |    |
